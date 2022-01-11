@@ -1,0 +1,214 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+
+overflow: hidden;
+height: 100vh;
+width: 100vh;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.mainArea_Image{
+  width: 300px;
+  height: 180px;
+}
+.App_header{
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  text-shadow: 3px 3px 1px purple;
+  border-bottom: 2px solid slategray;
+  background-color: #1e77bc;
+}
+.dropdowns{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: 2rem auto;
+  height: 15%;
+}
+.dropdown{
+  text-align: center;
+  width: 20%;
+  margin: 4px auto;
+}
+.dropdowns>label{
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+.maincomponent{
+  width: 100%;
+  height: 100%;
+  
+}
+.main_Area{
+  padding-top: 2rem;
+  width: 80%;
+  height:60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  border: 4px solid slategray;
+  
+ background-color: rgba(0, 0, 0, 0.2);
+ border-radius: 8px;
+}
+.mainArea_container{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  
+}
+.main_Area_Col1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+.formcontrol{
+  /* background-color: red; */
+ width: 50%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.formcontrol>label{
+  color: black;
+}
+.formcontrol>input{
+text-align: center;
+margin: 0.4rem 2rem;
+}
+.main_area_empty_header{
+  font-size: 4rem;
+text-align: center;
+width: 100%; 
+}
+.title{
+  text-align: center;
+  margin-top: 5px;
+  color: black;
+  /* background-color: white; */
+}
+@media only screen and (max-width: 1083px) {
+ 
+  .main_Area{
+    height: 40%;
+  }
+  body{
+    background-repeat: repeat;
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+  }
+  .App{
+    width: 100%;
+    height: 150vh;
+  }
+  .dropdown{
+    font-size: 1.5rem;
+  }
+  .mainArea_container{
+    flex-direction: column;
+  }
+  .main_Area {
+    height: 49%;
+}
+
+}
+@media only screen and (max-width: 653px) {
+
+  .App{
+    width: 100%;
+    height: 105vh;
+  }
+  .main_Area {
+    height: 72%;
+}
+.main_Area_Col1{
+  width: 100%;
+}
+}
+@media only screen and (max-width: 600px) {
+
+
+
+  .main_Area_Col1 {
+  
+    margin-left: 22px;
+
+}
+}
+@media only screen and (max-width: 473px) {
+
+  .App{
+    width: 100vh;
+    height: 105vh;
+    background-repeat: repeat;
+  }
+  body{
+    background-repeat: repeat;
+  }
+  .main_Area_Col1 {
+  
+    margin-left: 50px;
+
+}
+}
+@media only screen and (max-width: 400px) {
+html{
+  font-size: 1.2rem;
+}
+.dropdown {
+  font-size: 1.1rem;
+}
+  body{
+    background-repeat: repeat;
+  }
+  .App{
+    height: 150vh;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .App{
+    width: 130vw;
+    height: 100vh;
+  }
+  .mainArea_Image{
+    width: 150px;
+    
+  }
+  html{
+    font-size: 0.8rem;
+  }
+  .formcontrol>input{
+    font-size: 0.8rem;
+  }
+  .main_Area_Col1{
+    margin-left: 67px;
+  }
+  .dropdown{
+    font-size: 0.8rem;
+  }
+}
