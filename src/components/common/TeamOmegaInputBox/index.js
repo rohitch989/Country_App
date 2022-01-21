@@ -9,7 +9,7 @@ class TeamOmegaInputBox extends PureComponent {
   render() {
     const { type, name, values, placeholder, className, id, focus, read } = this.props;
 
-    return <input type={type} name={name} placeholder={placeholder} className={className} id={id} value={values} onChange={this.handleChange} autoFocus={focus} readOnly={read} />
+    return <input type={type} name={name} placeholder={placeholder} className={className} id={id} value={values} onChange={this.handleChange} autoFocus={focus} readOnly={read} data-test="TeamOmegaInputBox_Component" />
 
   }
 }

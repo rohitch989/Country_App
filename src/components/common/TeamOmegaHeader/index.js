@@ -6,25 +6,25 @@ class TeamOmegaHeader extends PureComponent {
 
   render() {
     let { text, type, className, id } = this.props;
-    let value = <h1>{text};</h1>
+    let value;
     switch (type) {
       case "h2":
-        value = <h2 className={className} id={id}> {text}</h2>;
+        value = <h2 className={className} id={id} data-test="TeamOmegaHeader_component"> {text}</h2>;
         break;
       case "h3":
-        value = <h3 className={className} id={id}> {text}</h3>;
+        value = <h3 className={className} id={id} data-test="TeamOmegaHeader_component"> {text}</h3>;
         break;
       case "h4":
-        value = <h4 className={className} id={id}> {text}</h4>;
+        value = <h4 className={className} id={id} data-test="TeamOmegaHeader_component"> {text}</h4>;
         break;
       case "h5":
-        value = <h5 className={className} id={id}> {text}</h5>;
+        value = <h5 className={className} id={id} data-test="TeamOmegaHeader_component"> {text}</h5>;
         break;
       case "h6":
-        value = <h6 className={className} id={id}> {text}</h6>;
+        value = <h6 className={className} id={id} data-test="TeamOmegaHeader_component"> {text}</h6>;
         break;
       default:
-        value = <h1 className={className} id={id}>{text}</h1>;
+        value = <h1 className={className} id={id} data-test="TeamOmegaHeader_component">{text}</h1>;
         break;
     }
     return value;

@@ -1,9 +1,9 @@
-import { FETCH_COUNTRIES, FETCH_COUNTRY_DETAIL } from "../Actions/Types";
+import { FETCH_COUNTRIES, FETCH_COUNTRY_DETAIL, GET_COUNTRY_DETAILS_ERROR, GET_COUNTRY_ERROR } from "../Actions/Types";
 
-const initialState = {
+export const initialState = {
   countries: [],
   countryDetails: {},
-
+  error: ""
 }
 
 const countryReducer = (state = initialState, action) => {
@@ -11,7 +11,8 @@ const countryReducer = (state = initialState, action) => {
     case FETCH_COUNTRIES:
       return {
         countries: action.payload,
-        countryDetails: {}
+        countryDetails: {},
+        error: ""
       }
 
     case FETCH_COUNTRY_DETAIL:
@@ -19,8 +20,16 @@ const countryReducer = (state = initialState, action) => {
         ...state,
         countryDetails: action.payload
       }
-
-
+    case GET_COUNTRY_ERROR:
+      return {
+        ...state,
+        error: action.payload
+      }
+    case GET_COUNTRY_DETAILS_ERROR:
+      return {
+        ...state,
+        error: action.payload
+      }
     default:
       return state;
 

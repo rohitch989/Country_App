@@ -14,14 +14,15 @@ class TeamOmegaDropDown extends Component {
     const { values, typeHeader } = this.props;
 
     return values && values.length > 0 ? <><label aria-labelledby={typeHeader} htmlFor={typeHeader} >{typeHeader} :</label>
-      <select onChange={this.changeHandler} id={typeHeader} className='dropdown' title={typeHeader}>
-        {values && values.map((item, index) => <option title={item} key={index} value={item}>{item.toUpperCase()}</option>)}
+      <select onChange={this.changeHandler} id={typeHeader} className='dropdown' title={typeHeader} data-test="TeamOmegaDropDown">
+        {values.map((item, index) => <option title={item} key={index} value={item}>{item.toUpperCase()}</option>)}
       </select> </> : null
   }
 }
 
 TeamOmegaDropDown.propTypes = {
-  values: PropTypes.array.isRequired,
-  typeHeader: PropTypes.string
+  values: PropTypes.array,
+  typeHeader: PropTypes.string,
+  changeSelect: PropTypes.func
 }
 export default TeamOmegaDropDown;
