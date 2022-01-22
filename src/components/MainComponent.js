@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import TeamOmegaDropDown from '../common/TeamOmegaDropDown';
-import { fetchCountries, fetchCountryDetails } from "../../Actions/CountryAction";
-import { continent, mapStateToProps } from "../../mockFile";
-import MainArea from '../MainArea';
+import TeamOmegaDropDown from './common/TeamOmegaDropDown';
+import { fetchCountries, fetchCountryDetails } from "../Actions/CountryAction";
+import { continent, mapStateToProps } from "../mockFile";
+import MainArea from './MainArea';
 
 export class MainComponent extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
-import TeamOmegaInputBox from '../TeamOmegaInputBox'
+import TeamOmegaInputBox from './TeamOmegaInputBox'
 
 class TeamOmegaFormReadOnly extends Component {
 

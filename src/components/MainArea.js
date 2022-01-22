@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TeamOmegaHeader from '../common/TeamOmegaHeader';
-import TeamOmegaFormReadOnly from '../common/TeamOmegaFormReadOnly';
+import TeamOmegaHeader from './common/TeamOmegaHeader';
+import TeamOmegaFormReadOnly from './common/TeamOmegaFormReadOnly';
 
 class MainArea extends Component {
 
@@ -13,14 +13,14 @@ class MainArea extends Component {
   }
   render() {
     if (this.props.countryDetail === undefined || this.props.countryDetail.name === undefined)
-      return <article className='main_Area' data-text="MainArea Welcome">
+      return <article className='main_Area' data-test="MainArea Welcome">
         {this.showAlert()}
         <TeamOmegaHeader text="Welcome to the  World" type="h1" className="main_area_empty_header" />
       </article>
 
     else {
       let { nativeName, flag, name } = this.props.countryDetail;
-      return <article className='main_Area' data-text="MainArea Form">
+      return <article className='main_Area' data-test="MainArea Form">
         {flag && <div className="mainArea_Image">
           <img src={flag} alt="flag" />
         </div>}

@@ -53,6 +53,7 @@
     "jasmine-enzyme": "^7.1.2",
     "jest-watch-typeahead": "^0.6.5",
     "moxios": "^0.4.0",
-    "redux-mock-store": "^1.5.4"
+    "redux-mock-store": "^1.5.4",
+    "sinon": "^12.0.1"
   }
 }

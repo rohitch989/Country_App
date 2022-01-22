@@ -1,17 +1,13 @@
 import moxios from "moxios";
-import store from '../store';
-import { fetchCountries, fetchCountryDetails } from '../Actions/CountryAction';
+import store from '../../store';
+import { fetchCountries, fetchCountryDetails } from '../../Actions/CountryAction';
 
 
 describe('-->CountryAction ', () => {
 
-  beforeEach(() => {
-    moxios.install();
-  });
+  beforeEach(() => moxios.install());
 
-  afterEach(() => {
-    moxios.uninstall();
-  });
+  afterEach(() => moxios.uninstall());
 
 
   it('-->fetchCountries updated state.countries', () => {
@@ -24,14 +20,9 @@ describe('-->CountryAction ', () => {
       { name: { common: "srilanka" } },
     ];
 
-
-
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
-      request.respondWith({
-        status: 200,
-        response: expectedState
-      })
+      request.respondWith({ status: 200, response: expectedState });
     });
 
     return store.dispatch(fetchCountries("africa"))
@@ -46,13 +37,9 @@ describe('-->CountryAction ', () => {
   it('-->fetchCountryDetails updated state.countriesDetails', () => {
 
     let expectedState = [{ name: "india", capital: "delhi" }];
-
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
-      request.respondWith({
-        status: 200,
-        response: expectedState
-      })
+      request.respondWith({ status: 200, response: expectedState });
     });
 
     return store.dispatch(fetchCountryDetails("india"))

@@ -1,17 +1,18 @@
-import { FETCH_COUNTRIES, FETCH_COUNTRY_DETAIL, GET_COUNTRY_ERROR, GET_COUNTRY_DETAILS_ERROR } from '../Actions/Types';
-import countryReducer, { initialState } from './countryReducer';
+import { FETCH_COUNTRIES, FETCH_COUNTRY_DETAIL, GET_COUNTRY_ERROR, GET_COUNTRY_DETAILS_ERROR } from '../../Actions/Types';
+import countryReducer, { initialState } from '../../reducers/countryReducer';
 
 
 describe('Country Reducer', () => {
   let newState;
-  it('Should return default state', () => {
 
+  it('Should return default state', () => {
     newState = countryReducer(undefined, {});
     expect(newState).toEqual(initialState);
   });
 
   it('-->return new state with countryList if pass type FETCH_COUNTRIES', () => {
     let list = ["india", "pakistan", "usa"];
+
     newState = countryReducer(undefined, {
       type: FETCH_COUNTRIES,
       payload: list

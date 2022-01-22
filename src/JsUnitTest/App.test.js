@@ -1,9 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
-import TeamOmegaHeader from './components/common/TeamOmegaHeader';
-import MainComponent from './components/MainComponent';
-
+import App from '../App';
+import TeamOmegaHeader from '../components/common/TeamOmegaHeader';
+import MainComponent from '../components/MainComponent';
 
 const setUp = shallow(<App />);
 
