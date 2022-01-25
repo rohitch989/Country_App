@@ -13,7 +13,7 @@ class TeamOmegaDropDown extends Component {
   render() {
     const { values, typeHeader } = this.props;
 
-    return values && values.length > 0 ? <><label aria-labelledby={typeHeader} htmlFor={typeHeader} >{typeHeader} :</label>
+    return values && values.length > 0 ? <><label aria-labelledby={typeHeader} htmlFor={typeHeader} className='dropdown_label'>{typeHeader} :</label>
       <select onChange={this.changeHandler} id={typeHeader} className='dropdown' title={typeHeader} data-test="TeamOmegaDropDown">
         {values.map((item, index) => <option title={item} key={index} value={item}>{item.toUpperCase()}</option>)}
       </select> </> : null

@@ -41,18 +41,22 @@ img{
 .dropdown{
   text-align: center;
   width: 20%;
+
+  border-radius: 2px;
+  -webkit-appearance: none;
   margin: 4px auto;
 }
-.dropdowns>label{
+.dropdown_label{
   background-color: white;
-  color: black;
+  color: blue;
   font-weight: bolder;
+  
 }
 .maincomponent{
   width: 100%;
   height: 100%;
   
-}
+} 
 .main_Area{
   padding-top: 2rem;
   width: 80%;
@@ -67,6 +71,10 @@ img{
  background-color: rgba(0, 0, 0, 0.2);
  border-radius: 8px;
 }
+.main_Area >h1{
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+}
 .mainArea_container{
  
   display: flex;
@@ -76,7 +84,6 @@ img{
   width: 100%;
   height: 8rem;
   margin: auto;
-  
 }
 .main_Area_Col1{
   display: flex;
@@ -95,6 +102,7 @@ align-items: center;
 }
 .formcontrol>label{
   color: black;
+  background-color: rgba(0, 0, 0, 0);
 }
 .formcontrol>input{
 text-align: center;
@@ -127,8 +135,17 @@ width: 100%;
     height: 150vh;
   }
   .dropdown{
-    font-size: 1.5rem;
+    font-size: 1rem;
+
   }
+  select>option{
+  font-size: 0.5rem;
+  text-align: center;
+  padding-left: 10px;
+ }
+ 
+
+
   .mainArea_container{
     flex-direction: column;
   }

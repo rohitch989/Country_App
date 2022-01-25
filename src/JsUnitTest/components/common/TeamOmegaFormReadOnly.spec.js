@@ -13,11 +13,7 @@ describe('Todofrom Component', () => {
   let component, wrapper, props;
   let values = { capital: "sad", subregion: "fdf", region: "dsd", population: 322, area: 323, languages: ["fd", "fdf"] };
 
-  beforeEach(() => {
-    props = { handleSubmit: mockFunc, values }
-    component = setUp(props);
-
-  })
+  beforeEach(() => { props = { handleSubmit: mockFunc, values }, component = setUp(props); })
 
   it('-->render', () => expect(findTestByAttr(component, 'TeamOmegaFormReadOnly').exists()).toEqual(true));
 
@@ -41,7 +37,6 @@ describe('Todofrom Component', () => {
       expect(mockFunc.calledWith(values)).toEqual(true);
       mockFunc.resetHistory()
     });
-
   });
 
   describe('-->Child Component', () => {

@@ -15,8 +15,7 @@ describe('MainApp Component', () => {
   let component, wrapper, dispatch;
 
   beforeEach(() => {
-    dispatch = store.dispatch;
-    store.dispatch = Sinon.spy()
+    dispatch = store.dispatch, store.dispatch = Sinon.spy()
     component = setUp();
   })
 

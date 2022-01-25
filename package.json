@@ -24,8 +24,9 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "testCover": "npm run test -- --coverage --watchAll=true"
   },
   "eslintConfig": {
     "extends": [

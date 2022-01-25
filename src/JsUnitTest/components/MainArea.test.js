@@ -16,10 +16,7 @@ describe('MainArea', () => {
   describe('-->display welcome', () => {
     let props, jsAlert = window.alert;
 
-    beforeEach(() => {
-      window.alert = Sinon.spy();
-      component = setUp(props);
-    })
+    beforeEach(() => { window.alert = Sinon.spy(), component = setUp(props); })
 
     afterEach(() => { window.alert = jsAlert })
 

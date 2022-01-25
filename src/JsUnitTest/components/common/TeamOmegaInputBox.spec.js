@@ -24,7 +24,6 @@ describe('TeamOmegaInputBox Component', () => {
   it('-->render', () => expect(findTestByAttr(component, 'TeamOmegaInputBox_Component').exists()).toEqual(true));
 
   it("-->checking proptype", () => {
-
     const expectedProps = {
       handlerChange: () => { }, values: "",
       type: "", ariaDescribedby: "",

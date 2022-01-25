@@ -42,10 +42,7 @@ describe('Country Reducer', () => {
 
   it('-->return new state with error if pass type GET_COUNTRY_DETAILS_ERROR', () => {
     let message = "Your server is budy"
-    newState = countryReducer(undefined, {
-      type: GET_COUNTRY_DETAILS_ERROR,
-      payload: message
-    });
+    newState = countryReducer(undefined, { type: GET_COUNTRY_DETAILS_ERROR, payload: message });
     expect(newState.error).toEqual(message);
   });
 
