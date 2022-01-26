@@ -1,7 +1,7 @@
 import React from "react";
 import Sinon from "sinon";
 import { shallow } from "enzyme";
-
+import { event, mockFunc } from '../App.mock'
 import MainArea from '../../components/MainArea';
 import TeamOmegaHeader from "../../components/common/TeamOmegaHeader";
 import TeamOmegaFormReadOnly from "../../components/common/TeamOmegaFormReadOnly";
@@ -11,7 +11,6 @@ const setUp = (props = {}) => shallow(<MainArea {...props} />);
 
 describe('MainArea', () => {
   let component, wrapper;
-
 
   describe('-->display welcome', () => {
     let props, jsAlert = window.alert;
@@ -81,7 +80,13 @@ describe('MainArea', () => {
 
         it('-->take countryDetals props to its props to display', () => expect(component.instance().props.countryDetail).toEqual(wrapper.dive().instance().props.values));
 
-        // handlesubmit is dummy
+        it('Submission should trigger handleSummit', () => {
+          let fn = component.instance().onSubmitHandler;
+          component.instance().onSubmitHandler = Sinon.spy();
+          component.instance().onSubmitHandler("nvjdn");
+          expect(component.instance().onSubmitHandler.calledOnce).toEqual(true);
+          component.instance().onSubmitHandler = fn;
+        })
       });
 
     });

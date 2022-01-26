@@ -8,7 +8,7 @@ import TeamOmegaInputBox from '../../../components/common/TeamOmegaInputBox';
 const setUp = (props = {}) => shallow(<TeamOmegaFormReadOnly {...props} />);
 
 
-describe('Todofrom Component', () => {
+describe('TeamOmegaFormReadOnly Component', () => {
 
   let component, wrapper, props;
   let values = { capital: "sad", subregion: "fdf", region: "dsd", population: 322, area: 323, languages: ["fd", "fdf"] };
@@ -21,6 +21,7 @@ describe('Todofrom Component', () => {
     const expectedProps = {
       handleSubmit: () => { }, values: {}
     }
+
     const propsError = checkProps(TeamOmegaFormReadOnly, expectedProps);
     expect(propsError).toBeUndefined();
   })
@@ -31,7 +32,7 @@ describe('Todofrom Component', () => {
 
     // // changeHandler nothing
 
-    it("-->handleSubmit pass the todo through props and reset the state", () => {
+    it("-->handleSubmit ", () => {
       wrapper.handleSubmit(event);
       expect(mockFunc.calledOnce).toEqual(true);
       expect(mockFunc.calledWith(values)).toEqual(true);

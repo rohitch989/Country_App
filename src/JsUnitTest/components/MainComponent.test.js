@@ -1,12 +1,14 @@
 import React from 'react';
 import Sinon from 'sinon';
 import { shallow } from 'enzyme';
-
 import { findTestByAttr, event } from '../App.mock'
 import MainComponent from '../../components/MainComponent';
 import TeamOmegaDropDown from '../../components/common/TeamOmegaDropDown';
 import store from '../../store'
 import MainArea from '../../components/MainArea';
+
+
+
 
 const setUp = () => shallow(<MainComponent store={store} />).childAt(0).dive()
 
@@ -28,6 +30,7 @@ describe('MainApp Component', () => {
     beforeEach(() => wrapper = component.instance());
 
     it("-->DropDownHandlerContinent trigger dispatch", () => {
+
       wrapper.DropDownHandlerContinent("africa");
       expect(store.dispatch.calledOnce).toEqual(true);
       store.dispatch.resetHistory()

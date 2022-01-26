@@ -5,7 +5,7 @@ import TeamOmegaFormReadOnly from './common/TeamOmegaFormReadOnly';
 class MainArea extends Component {
 
   onSubmitHandler = text => {
-    return;
+    return text;
   }
   showAlert = () => {
     if (this.props.countryDetail === undefined)
